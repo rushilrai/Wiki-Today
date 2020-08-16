@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:wiki_today/utils/colors.dart';
-import 'package:wiki_today/views/home_screen.dart';
 import 'package:wiki_today/views/splashscreen.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         statusBarIconBrightness: Brightness.dark,
         systemNavigationBarColor: whiteColor,
       ),
-      child: MaterialApp(
+      child: GetMaterialApp(
         title: 'Wiki-Today',
         home: SplashScreen(),
       ),

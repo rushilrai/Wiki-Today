@@ -24,6 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^0.12.2
+  get: ^3.4.6
+  intl: ^0.16.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -34,10 +36,19 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_native_splash: ^0.1.9
+  flutter_launcher_icons: ^0.7.5
 
 flutter_native_splash:
   color: "ffffff"
   android_disable_fullscreen: true
+
+flutter_icons:
+  ios: true
+  android: true
+  image_path_ios: "assets/wikitoday.png"
+  image_path_android: "assets/wikitoday.png"
+  adaptive_icon_background: "assets/wikitoday.png"
+  adaptive_icon_foreground: "assets/wikitoday.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -67,28 +78,13 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Comfortaa
+    - family: GoogleSans
       fonts:
-        - asset: assets/fonts/Comfortaa/Comfortaa-Regular.ttf
-          weight: 200
-        - asset: assets/fonts/Comfortaa/Comfortaa-Medium.ttf
-          weight: 400
-        - asset: assets/fonts/Comfortaa/Comfortaa-SemiBold.ttf
-          weight: 600
-        - asset: assets/fonts/Comfortaa/Comfortaa-Bold.ttf
-          weight: 800
-        - asset: assets/fonts/Comfortaa/Comfortaa-Light.ttf
+        - asset: assets/fonts/GoogleSans/ProductSans-Light.ttf
           weight: 100
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+        - asset: assets/fonts/GoogleSans/ProductSans-Regular.ttf
+          weight: 200
+        - asset: assets/fonts/GoogleSans/ProductSans-Medium.ttf
+          weight: 400
+        - asset: assets/fonts/GoogleSans/ProductSans-Bold.ttf
+          weight: 600

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:wiki_today/models/api_call.dart';
 import 'package:wiki_today/utils/colors.dart';
 import 'package:wiki_today/utils/size_helper.dart';
@@ -19,14 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void replace() async {
     await dataReceive();
-    Navigator.push(
-      context,
-      CupertinoPageRoute(
-        builder: (context) {
-          return HomeScreen();
-        },
-      ),
-    );
+    Get.off(HomeScreen());
     setState(() {});
   }
 
@@ -56,13 +50,16 @@ class _SplashScreenState extends State<SplashScreen> {
             builder: (context, value, child) {
               return Material(
                 type: MaterialType.transparency,
-                child: Text(
-                  'Wiki-Today',
-                  style: TextStyle(
-                    fontFamily: 'Comfortaa',
-                    fontWeight: FontWeight.w600,
-                    fontSize: displayWidth(context) * 0.11,
-                    color: Color.fromRGBO(0, 0, 0, value),
+                child: Hero(
+                  tag: 'logo',
+                  child: Text(
+                    'Wiki-Today',
+                    style: TextStyle(
+                      fontFamily: 'GoogleSans',
+                      fontWeight: FontWeight.w600,
+                      fontSize: 40,
+                      color: Color.fromRGBO(0, 0, 0, value),
+                    ),
                   ),
                 ),
               );

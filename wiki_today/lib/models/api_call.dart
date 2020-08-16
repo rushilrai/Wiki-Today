@@ -1,12 +1,15 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
+import 'package:intl/intl.dart';
 
 bool dataReceived = false;
 
 void post() async {
+  var now = DateTime.now();
+  var date = DateFormat("LLLL_d").format(now);
+  print(date);
   var responsePost =
-      await http.post('https://wiki-todayv1.herokuapp.com/wiki/August_13');
+      await http.post('https://wiki-todayv1.herokuapp.com/wiki/$date');
   print(responsePost.statusCode);
 }
 
